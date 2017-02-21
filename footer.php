@@ -3,6 +3,11 @@
 				<footer>
 					<div id="footer">
 						<div class="cd-tool visible-lg text-center">
+							<?php if ( $this->options->cd_gb && $this->options->cd_weixin ) { ?>
+						   		<a rel="nofollow" class="cd-gb-a" href="<?php $this->options->guestbook_links; ?>"><span class="fa fa-book"></span></a>	
+						   	<?php } elseif( $this->options->cd_gb && $this->options->cd_weixin){ ?>
+						   		<a rel="nofollow" class="cd-gb-b" href="<?php $this->options->guestbook_links; ?>"><span class="fa fa-book"></span></a>	
+						   	<?php } ?>
 						   	<?php if ( $this->options->cd_weixin ) : ?>
 						   		<a id="weixin-img" class="cd-weixin"><span class="fa fa-weixin"></span><div id="weixin-pic"><img src="<?php $this->options->themeUrl('images/weixin.png') ?>"></div></a>
 						   	<?php endif; ?>
@@ -42,7 +47,6 @@
 		<script type='text/javascript' src="<?php $this->options->themeUrl('js/superfish.js?ver=1.0.0') ?>"></script>
 		<script type='text/javascript' src="<?php $this->options->themeUrl('js/kratos.js?ver=2.5.1') ?>"></script>
 		<script type='text/javascript' src="<?php $this->options->themeUrl('js/kratos.diy.js?ver=2.5.1') ?>"></script>
-		<?php if ( kratos_option('site_sa')==1 ) : ?>
 			<script type="text/javascript">
 				if ($("#main").height() > $("#sidebar").height()) {
 					var footerHeight = 0;
@@ -57,6 +61,5 @@
 					});
 				}
 			</script>
-		<?php endif; ?>
 	</body>
 </html>

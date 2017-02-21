@@ -31,7 +31,10 @@
 			</div>
 			<div class="tab-pane fade" id="hot">
 				<ul class="list-group">
-					<?php $this->widget('Widget_Contents_Post_Recent')->parse('<a class="list-group-item visible-md visible-lg" title="{title}" href="{permalink}"><i class="fa  fa-book"></i> {title}</a>'); ?>
+					<?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
+					<?php while($comments->next()): ?>
+						<li><?php $comments->author(false); ?>: <a class="list-group-item visible-md visible-lg" href="<?php $comments->permalink(); ?>"><i class="fa  fa-book"></i><?php $comments->excerpt(10, '[...]'); ?></a></li>
+					<?php endwhile; ?>
 				</ul>
 			</div>
 		</div>

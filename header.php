@@ -31,14 +31,13 @@
 	<?php flush(); ?>
 	<body data-spy="scroll" data-target=".scrollspy">
 		<div class="kratos-wrapper">
-			<div class="kratos-page">
+			<div id="kratos-page">
 				<div class="kratos-header">
 					<header id="kratos-header-section">
 						<div class="container">
 							<div class="nav-header">
-									<!-- <a href="#" class="js-kratos-nav-toggle kratos-nav-toggle"><i></i></a> -->
+									<a href="#" class="js-kratos-nav-toggle kratos-nav-toggle"><i></i></a>
 									<h1 id="kratos-logo"><a href="<?php echo $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></h1>
-								<?php $defaults = array('theme_location' => 'header_menu', 'container' => 'nav', 'container_id' => 'kratos-menu-wrap', 'menu_class' => 'sf-menu', 'menu_id' => 'kratos-primary-menu', ); ?>
 								<nav id="kratos-menu-wrap" class="menu-menu-container">
 									<ul id="kratos-primary-menu" class="sf-menu">
 										<li><a href="<?php $this->options->siteUrl(); ?>">首页</a></li>

@@ -15,9 +15,6 @@ $this->need('header.php');?>
 	<div class="container">
 		<div class="row">
 			<section id="main" class="col-md-8">
-				<?php if ($this->is('index')) {
-					kratos_banner();
-				} ?>
 				<?php while($this->next()): ?>
 					<article class="kratos-hentry clearfix">
 						<div class="kratos-entry-border-new clearfix">

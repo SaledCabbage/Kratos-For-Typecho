@@ -9,6 +9,11 @@ function themeConfig($form) {
     $form->addInput($background_index_color);
     $form->addInput($site_bw->multiMode());
     $form->addInput($site_tongji);
+//留言本链接设置
+    $cd_gb = new Typecho_Widget_Helper_Form_Element_Checkbox('cd_gb',array('cd_gb' => _t('开启站点留言板')),array('cd_gb'),_t('<b>网站留言本设置</b>'),_t('开启站点留言板后请务必设置下方的留言板链接！'));
+    $guestbook_links = new Typecho_Widget_Helper_Form_Element_Text('guestbook_links',NULL,NULL,_t('网站留言本链接'),_t('请输入以http或https开头，开启留言本选项请务必设置此项目。'));
+    $form->addInput($cd_gb->multiMode());
+    $form->addInput($guestbook_links);
 //微信展示设置
     $cd_weixin = new Typecho_Widget_Helper_Form_Element_Checkbox('cd_weixin',array('cd_weixin' => _t('开启微信展示')),array('cd_weixin'),_t('<b>微信展示设置</b>'),_t('<b>开启微信展示前，请将您的微信二维码替换在主题目录下的images/weixin_code.png文件。</b>'));
     $form->addInput($cd_weixin->multiMode());
