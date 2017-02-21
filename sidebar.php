@@ -39,6 +39,19 @@
 			</div>
 		</div>
 	</aside>
+	<?php if($this->options->tags_switch) {?>
+	<aside id="kratos_tags-2" class="widget widget_kratos_tags clearfix"><h4 class="widget-title">标签聚合</h4><div class="tag_clouds">
+	<?php $this->widget('Widget_Metas_Tag_Cloud', 'ignoreZeroCount=1&limit=20')->to($tags); ?>
+	<?php if($tags->have()): ?>
+	<?php while($tags->next()): ?>
+		<a style="color: rgb(<?php echo(rand(0, 255)); ?>, <?php echo(rand(0,255)); ?>, <?php echo(rand(0, 255)); ?>)" href="<?php $tags->permalink(); ?>" title='<?php $tags->name(); ?>'><?php $tags->name(); ?></a>
+	<?php endwhile; ?>
+	<?php else: ?>
+		<a href="javascript:void(0);"><?php _e('没有任何标签'); ?></a>
+	<?php endif; ?>
+	</div>
+	</aside>
+	<?php }  ?>
 
 </div>
 </aside>

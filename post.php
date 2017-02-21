@@ -9,10 +9,18 @@
 					<div class="kratos-hentry kratos-post-inner clearfix">
 						<header class="kratos-entry-header">
 							<h1 class="kratos-entry-title text-center"><?php $this->title() ?></h1>
+							<div class="kratos-post-meta text-right">
+								<span><i class="fa fa-calendar"></i><?php $this->date('Y-m-d H:i'); ?>
+								<?php $this->commentsNum('<i class="fa fa-commenting-o"></i> No Comment ','<i class="fa fa-commenting-o"></i> 1 Comment ','<i class="fa fa-commenting-o"></i> %d Comments '); ?></span>
+								
+							</div>
 						</header>
 						<div class="kratos-post-content"><?php $this->content(); ?></div>
 						<footer class="kratos-entry-footer clearfix">
 							<div class="post-like-donate text-center clearfix" id="post-like-donate">
+								<?php if ( $this->options->page_like_donate ) : ?>
+					   			<a href="<?php echo  $this->options->donate_links; ?>" class="Donate"><i class="fa fa-bitcoin"></i> 打赏</a>
+					   			<?php endif; ?>
 								<a href="javascript:;"  class="Share" ><i class="fa fa-share-alt"></i> 分享</a>
 								<div class="share-wrap" style="display: none;">
 									<div class="share-group">
@@ -100,6 +108,7 @@ $imgCount = count($matches[0]);
 						<?php $this->theNext('<a>下一篇：</a>%s','<a>没有了</a>'); ?>
 					</div>
 				</nav>
+				<?php $this->need('comments.php'); ?>
 			</section>
 			<?php $this->need('sidebar.php'); ?>
 		</div>

@@ -15,6 +15,9 @@
 						<div class="kratos-post-content"><?php $this->content(); ?></div>
 						<footer class="kratos-entry-footer clearfix">
 							<div class="post-like-donate text-center clearfix" id="post-like-donate">
+								<?php if ( $this->options->page_like_donate ) : ?>
+					   			<a href="<?php echo  $this->options->donate_links; ?>" class="Donate"><i class="fa fa-bitcoin"></i> 打赏</a>
+					   			<?php endif; ?>
 								<a href="javascript:;"  class="Share" ><i class="fa fa-share-alt"></i> 分享</a>
 								<div class="share-wrap" style="display: none;">
 									<div class="share-group">

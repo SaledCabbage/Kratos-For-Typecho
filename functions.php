@@ -3,11 +3,13 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 function themeConfig($form) {
 //全局设置
-    $background_index_color = new Typecho_Widget_Helper_Form_Element_Text('background_index_color',NULL,NULL,_t('设置网页背景颜色'),_t('为整个网页设定背景颜色，如#FFFFFF。'));
-    $site_bw = new Typecho_Widget_Helper_Form_Element_Checkbox('site_bw',array('site_bw' => _t('开启站点黑白显示')),array('site_bw'),_t('<b>网站颜色设置</b>'),_t('黑白显示一般用于悼念日'));
-    $site_tongji = new Typecho_Widget_Helper_Form_Element_Textarea('site_tongji',NULL,NULL,_t('站点统计代码'),_t('填写时需要去掉script标签'));
+    $background_index_color = new Typecho_Widget_Helper_Form_Element_Text('background_index_color',NULL,NULL,_t('设置网页背景颜色'),_t('为整个网页设定背景颜色，如#FFFFFF。'));//网页背景颜色
+    $site_bw = new Typecho_Widget_Helper_Form_Element_Checkbox('site_bw',array('site_bw' => _t('开启站点黑白显示')),array('site_bw'),_t('<b>网站颜色设置</b>'),_t('黑白显示一般用于悼念日'));//站点黑白设置
+    $tags_switch = new Typecho_Widget_Helper_Form_Element_Checkbox('tags_switch',array('tags_switch' => _t('开启标签聚合工具栏')),array('tags_switch'),_t('<b>右侧边栏设置</b>'),_t('开启标签聚合开关'));//右边栏便签聚合开关
+    $site_tongji = new Typecho_Widget_Helper_Form_Element_Textarea('site_tongji',NULL,NULL,_t('站点统计代码'),_t('填写时需要去掉script标签'));//网站统计代码
     $form->addInput($background_index_color);
     $form->addInput($site_bw->multiMode());
+    $form->addInput($tags_switch->multiMode());
     $form->addInput($site_tongji);
 //留言本链接设置
     $cd_gb = new Typecho_Widget_Helper_Form_Element_Checkbox('cd_gb',array('cd_gb' => _t('开启站点留言板')),array('cd_gb'),_t('<b>网站留言本设置</b>'),_t('开启站点留言板后请务必设置下方的留言板链接！'));
@@ -31,6 +33,11 @@ function themeConfig($form) {
 //文章内容设置
     $page_cc = new Typecho_Widget_Helper_Form_Element_Checkbox('page_cc',array('page_cc' => _t('启用 CC BY-SA 4.0 声明')),array('page_cc'),_t('<b>版权声明</b>'));
     $form->addInput($page_cc->multiMode());
+//开启文章打赏功能
+    $page_like_donate = new Typecho_Widget_Helper_Form_Element_Checkbox('page_like_donate',array('page_like_donate' => _t('启用 文章打赏功能')),array('page_cc'),_t('<b>开启文章打赏</b>'));
+    $donate_links = new Typecho_Widget_Helper_Form_Element_Text('donate_links',NULL,NULL,_t('开启打赏功能'),_t('开启打赏功能后请务必输入打赏链接，链接前要带有http://或https://'));
+    $form->addInput($page_like_donate->multiMode());
+    $form->addInput($donate_links);
 //404页面设置
 
 //页脚配置

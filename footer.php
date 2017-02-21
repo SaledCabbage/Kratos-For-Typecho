@@ -24,7 +24,7 @@
 										<?php echo ($this->options->social_linkedin=='') ? '' : '<a target="_blank" rel="nofollow" href="' . $this->options->social_linkedin . '"><i class="fa fa-linkedin-square"></i></a>'; ?>
 										<?php echo ($this->options->social_github=='') ? '' : '<a target="_blank" rel="nofollow" href="' . $this->options->social_github . '"><i class="fa fa-github"></i></a>'; ?>
 									</p>
-									<p>Copyright 2017 <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>. All Rights Reserved.<br>Theme <a href="https://github.com/vtrois/kratos" target="_blank" rel="nofollow">Kratos</a> made by <a href="https://www.vtrois.com/" target="_blank" rel="nofollow">Vtrois</a> transplant by <a href="http://smallest.com.cn/" target="_blank" rel="nofollow">HwangSir</a>
+									<p>Copyright 2017 <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>. All Rights Reserved.<br>Theme <a href="https://github.com/vtrois/kratos" target="_blank" rel="nofollow">Kratos</a> made by <a href="https://www.vtrois.com/" target="_blank" rel="nofollow">Vtrois</a> transplant by <a href="http://smallest.com.cn/" target="_blank" rel="nofollow">Smallest</a>
 										<?php if($this->options->icp_num!=''){?><br><a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank"><?php echo $this->options->icp_num; } ?></a><?php if($this->options->gov_num!=''){?><br><a href="<?php echo $this->options->gov_link; ?>" rel="external nofollow" target="_blank"><i class="govimg"></i><?php echo $this->options->gov_num; ?></a><?php }?></p>
 									<p><?php echo ($this->options->site_tongji=='') ? '' : '<script>' . $this->options->site_tongji . '</script>'; ?>
 									</p>
