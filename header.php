@@ -30,7 +30,7 @@
 	</head>
 	<?php flush(); ?>
 	<body data-spy="scroll" data-target=".scrollspy">
-		<div class="kratos-wrapper">
+		<div id="kratos-wrapper">
 			<div id="kratos-page">
 				<div class="kratos-header">
 					<header id="kratos-header-section">

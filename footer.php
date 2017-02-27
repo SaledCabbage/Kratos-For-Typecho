@@ -4,9 +4,9 @@
 					<div id="footer">
 						<div class="cd-tool visible-lg text-center">
 							<?php if ( $this->options->cd_gb && $this->options->cd_weixin ) { ?>
-						   		<a rel="nofollow" class="cd-gb-a" href="<?php $this->options->guestbook_links; ?>"><span class="fa fa-book"></span></a>	
+						   		<a rel="nofollow" class="cd-gb-a" href="<?php echo $this->options->guestbook_links; ?>"><span class="fa fa-book"></span></a>	
 						   	<?php } elseif( $this->options->cd_gb && $this->options->cd_weixin){ ?>
-						   		<a rel="nofollow" class="cd-gb-b" href="<?php $this->options->guestbook_links; ?>"><span class="fa fa-book"></span></a>	
+						   		<a rel="nofollow" class="cd-gb-b" href="<?php echo $this->options->guestbook_links; ?>"><span class="fa fa-book"></span></a>	
 						   	<?php } ?>
 						   	<?php if ( $this->options->cd_weixin ) : ?>
 						   		<a id="weixin-img" class="cd-weixin"><span class="fa fa-weixin"></span><div id="weixin-pic"><img src="<?php $this->options->themeUrl('images/weixin.png') ?>"></div></a>
