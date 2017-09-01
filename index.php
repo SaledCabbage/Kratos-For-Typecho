@@ -5,7 +5,7 @@
  *@package Typecho Kratos Theme
  *@author Hwang Sir(hwang.site) & VTROIS(vtrois.com)
  *@version 2.5.1
- *@link http://smallest.com.cn
+ *@link http://hwang.site
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;

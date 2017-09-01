@@ -64,7 +64,7 @@
 											var host_url="<?php $this->permalink() ?>";
 											var title="【<?php $this->title() ?>】";
 											var qqtitle="<?php $this->title() ?>";
-											var excerpt="<?php echo $this->excerpt(50, '...'); ?>";
+											var excerpt=`<?php echo $this->excerpt(50, '...'); ?>`;
 											var pic="<?php
 								preg_match_all("/\<img.*?src\=(\'|\")(.*?)(\'|\")[^>]*>/i", $this->content, $matches);
 $imgCount = count($matches[0]);
